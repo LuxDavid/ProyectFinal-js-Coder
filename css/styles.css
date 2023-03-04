@@ -1,0 +1,287 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url('../images/pizza-fondo.jpg');
+    background-attachment: fixed;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    min-height: 910px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px #ccc;
+
+}
+
+#cabecera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px #ccc;
+    margin-bottom: 1.5rem;
+
+}
+
+#menu {
+    flex-grow: 1;
+    flex-basis: 20%;
+    height: 100%;
+    padding-right: 5px;
+
+}
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    list-style: none;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 100ms;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#menu ul li a:hover {
+    color: #37bcf9;
+    background-color: rgb(196, 196, 20);
+    cursor: pointer;
+    height: 50px;
+}
+
+.image-carrusel {
+    height: 23rem;
+    width: 100%;
+    border-color: 2px;
+}
+
+#ilustracion{
+width: 70%;
+}
+
+#carouselExampleCaptions {
+    width: 100%;
+    border: 5px solid white;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+#carrusel {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.text-carrusel {
+    font-size: 22px;
+}
+
+#titulo {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    overflow: hidden;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#titulo h1 {
+    font-family: 'Tilt Prism', cursive;
+    color: white;
+}
+
+#articles {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 15px;
+}
+
+#articles h2 {
+    width: 98%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: black;
+    box-shadow: 0px 1px 0px #ccc, 1px 2px 0px #ccc, 2px 3px 0px #ccc, 3px 4px 0px #ccc;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#articles article {
+    display: flex;
+    flex-flow: column wrap;
+    width: 95%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+    color: black;
+    box-shadow: 1px 1px 2px #ddd;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#articles article h4 {
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+    margin-top: 15px;
+}
+
+#articles article h4 a {
+    text-decoration: none;
+    color: #00538c;
+}
+
+#articles article h4 a:hover {
+    text-decoration: underline;
+}
+
+#articles article .data {
+    align-self: flex-end;
+    text-align: center;
+    background: #393d3f;
+    color: white;
+    height: 30px;
+    width: 7rem;
+    line-height: 30px;
+    margin: -10px;
+
+    padding-bottom: 15px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+
+
+}
+
+#articles article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#login {
+display: flex;
+flex-flow:column wrap ;
+margin: 20px;
+width: 20%;
+min-height:20rem;
+}
+
+.aside-box{
+    width:85%;
+    height: 240px;
+    margin:0px auto;
+    margin-top: 20px;
+    padding-top:2px;
+    background:white; 
+    border:1px solid black; 
+    box-shadow:0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3),0px 1px white inset,0px -3px 2px rgba(0,0,0,0.3) inset ;	
+    }
+    
+    #login input[type="email"],
+    #login input[type="password"]{
+    display: block;
+    margin: 0px auto;
+    width: 82%;
+    height: 30px;
+    margin-top: 20px;
+    border:1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc inset;
+    border-radius: 5px;
+    padding-left: 30px;
+    color:gray;
+    }
+    
+    #login input[type="email"]:focus,
+    #login input[type="password"]:focus{
+    color: #555;
+    box-shadow: 1px 1px 1px gray inset;	
+    }
+    
+    #login #user,
+    #login #password{
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-left: 15px;
+    margin-top:6px;
+    height: 30px;
+    }
+    
+    #login #password{
+    margin-left: 18px;
+    margin-top: 25px;
+    font-size: 20px;	
+    }
+    
+    #login input[type="reset"],
+    #login input[type="submit"],
+    #login input[type="button"],
+    #login button{	
+    text-align: center;
+    width: 100px;
+    height:35px;
+    margin-top: 20px;
+    color: white;
+    background:linear-gradient(to bottom,#3eb8e5 0%, #2ca0ca 100%);
+    border:1px solid #156785;
+    border-radius: 0px;
+     cursor:pointer;
+     font-size: 15px;
+     font-family: "TrebuchetMS";
+    font-weight: lighter;
+    margin-left: 17px;
+    margin-bottom: 20px;
+    transition: all 300ms;
+    }
+    
+    #login input[type="reset"]:hover,
+    #login input[type="submit"]:hover,
+    #login input[type="button"]:hover,
+    #login button:hover{
+    box-shadow: 0px 0px 3px gray;
+    }
+    
+    #login a{
+    display: block;	
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 18px;
+    color: #555;
+    }
+    
+    #login a:hover{
+    text-decoration: underline;
+    color: #2f78bc;	
+    }

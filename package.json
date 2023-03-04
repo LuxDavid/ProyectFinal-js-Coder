@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-final-javascriptcoder",
+  "version": "1.0.0",
+  "description": "Proyecto-final-del-curso-de-javascript-en-coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuxDavid/ProyectFinal-js-Coder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuxDavid/ProyectFinal-js-Coder/issues"
+  },
+  "homepage": "https://github.com/LuxDavid/ProyectFinal-js-Coder#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
