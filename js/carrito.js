@@ -52,5 +52,18 @@ ${prod.nombre}
 `
 }
 
+const crearElementos=(arr)=>{
+const filaProductos=document.querySelector('.list-group');
+let compra='';
+
+arr.forEach((prod)=>{
+
+compra+=cargarCarrito(prod);
+filaProductos.innerHTML=compra;
+})
+}
+
 carrito.length >=1 ? containerCarrito.innerHTML=carritoCargado() : containerCarrito.innerHTML=carritoVacio();
+
+containerCarrito.innerHTML==carritoCargado()&&crearElementos(carrito);
 
