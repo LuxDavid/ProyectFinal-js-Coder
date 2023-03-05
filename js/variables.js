@@ -8,12 +8,26 @@ let products = [
     { id: 5, nombre: 'pizza mexicana', precio: 140, oferta: 'Lunes',image:'pizza-mexicana.jpg' },
 ];
 
-let carrito = [];
+const carrito = [];
 
 const semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
 let dia=new Date();
 
-let productCard=document.getElementsByClassName('comida');
+const productCard=document.getElementsByClassName('comida');
 
-let emptyCarrito=document.querySelector('#carrito-vacio');
+const recuperarCarrito = () => {
+
+    let miCarrito = JSON.parse(localStorage.getItem("carrito"))
+    if (miCarrito) {
+
+        miCarrito.forEach(element => {
+            carrito.push(element)
+        });
+
+
+    }
+
+}
+
+

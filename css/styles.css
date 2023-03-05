@@ -354,6 +354,20 @@ border-radius: 900px;
 
 .cart-link{
     text-decoration: none;
-    color: white;
+    color: rgb(45, 45, 182);
     font-size: 30px;
+}
+
+#container-carrito{
+display: flex;
+flex-direction: column;
+}
+
+
+
+.list-group-item{
+text-align: center;
+justify-content: space-between;
+align-self: center;
+width: 40rem;
 }

@@ -43,9 +43,25 @@ for (const boton of productCard) {
 let agregar=products.find(prod=>prod.id == boton.id);
 
 carrito.push(agregar);
+guardoCarrito();
 console.log(carrito);
 }
 )}
 
 /*--------------------------------------------------------------FIN AGREGAR PRODUCTOS AL CARRITO---------------------------------------*/
 
+/*--------------------------------------------------------------INICIO RECUPERAR CARRITO---------------------------------------*/
+
+const guardoCarrito=()=>{
+  carrito.length>0 &&  localStorage.setItem("carrito", JSON.stringify(carrito))
+  
+  }
+
+ 
+
+recuperarCarrito();
+
+
+
+
+/*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/
