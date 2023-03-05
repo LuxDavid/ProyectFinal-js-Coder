@@ -65,7 +65,7 @@ body {
 
 #menu ul li a:hover {
     color: #37bcf9;
-    background-color: rgb(196, 196, 20);
+    background-color: white;
     cursor: pointer;
     height: 50px;
 }
@@ -81,9 +81,10 @@ width: 70%;
 }
 
 #carouselExampleCaptions {
-    width: 100%;
-    border: 5px solid white;
+    width: 90%;
+    border: 2px solid white;
     box-shadow: 0px 0px 10px #ccc;
+    margin-left: 3rem;
 }
 
 #carrusel {
@@ -100,7 +101,7 @@ width: 70%;
     display: flex;
     width: 500px;
     height: 100px;
-    border: 10px solid white;
+    border: 5px solid white;
     box-shadow: 0px 0px 2px gray;
     overflow: hidden;
     margin: 20px auto;
@@ -122,7 +123,7 @@ width: 70%;
 }
 
 #articles h2 {
-    width: 98%;
+    width: 90%;
     height: 75px;
     line-height: 75px;
     text-align: center;
@@ -130,8 +131,8 @@ width: 70%;
     font-weight: normal;
     letter-spacing: 2px;
     background-color: black;
-    box-shadow: 0px 1px 0px #ccc, 1px 2px 0px #ccc, 2px 3px 0px #ccc, 3px 4px 0px #ccc;
-    margin: 0px auto;
+    box-shadow: 0px 1px 0px white, 1px 2px 0px white, 2px 3px 0px white, 3px 4px 0px white;
+    margin-left: 3rem;
     margin-top: 20px;
     margin-bottom: 15px;
     color: white;
@@ -140,13 +141,13 @@ width: 70%;
 #articles article {
     display: flex;
     flex-flow: column wrap;
-    width: 95%;
+    width: 90%;
     border: 1px solid #ccc;
     padding: 10px;
     background: white;
     color: black;
     box-shadow: 1px 1px 2px #ddd;
-    margin-left: 20px;
+    margin-left: 3rem;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -190,12 +191,37 @@ width: 70%;
     font-size: 15px;
 }
 
+#lateral{
+    display: flex;
+    flex-flow: column;	
+    width: 20%;
+    height: 25rem;	
+    margin-left: 10px;
+    
+    }
+    
+    #lateral h3{
+    margin-left: 2rem;
+    text-align: center;
+    height: 45px;
+    line-height: 42px;
+    background: black;
+    border: 2px solid white;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding: left 15px;
+    color: white;
+    
+    }
+
 #login {
 display: flex;
 flex-flow:column wrap ;
 margin: 20px;
-width: 20%;
+width: 100%;
 min-height:20rem;
+text-align: center;
 }
 
 .aside-box{
@@ -204,8 +230,8 @@ min-height:20rem;
     margin:0px auto;
     margin-top: 20px;
     padding-top:2px;
-    background:white; 
-    border:1px solid black; 
+    background:black; 
+    border:1px solid white; 
     box-shadow:0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3),0px 1px white inset,0px -3px 2px rgba(0,0,0,0.3) inset ;	
     }
     
@@ -253,9 +279,9 @@ min-height:20rem;
     width: 100px;
     height:35px;
     margin-top: 20px;
-    color: white;
-    background:linear-gradient(to bottom,#3eb8e5 0%, #2ca0ca 100%);
-    border:1px solid #156785;
+    color: black;
+    background:linear-gradient(to bottom,#444 0%, white 100%);
+    border:1px solid white;
     border-radius: 0px;
      cursor:pointer;
      font-size: 15px;
@@ -270,18 +296,64 @@ min-height:20rem;
     #login input[type="submit"]:hover,
     #login input[type="button"]:hover,
     #login button:hover{
-    box-shadow: 0px 0px 3px gray;
+    box-shadow: 0px 0px 3px white;
     }
     
     #login a{
     display: block;	
     font-size: 14px;
     text-decoration: none;
-    margin-left: 18px;
-    color: #555;
+    color: white;
     }
     
     #login a:hover{
     text-decoration: underline;
     color: #2f78bc;	
     }
+
+#container-products{
+display: flex;
+flex-wrap: wrap;
+border: 2px solid white;
+box-shadow: 0px 0px 10px #ccc;
+width: 85%;
+height: 90rem;
+margin-left: 10rem;
+justify-content: space-around;
+}
+
+.card{
+margin-top: 1rem;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+.card-img-top{
+height: 12rem;
+border-bottom: 1px solid black;
+}
+
+#carrito-vacio{
+display: flex;
+width: 100%;
+height: 30rem;
+align-items: start;
+justify-content: center;
+}
+
+#carrito-titulo{
+color: yellow;
+text-align: center;
+font-size: 50px;
+}
+
+.button-carrito:hover{
+background-color: white!important;
+border-radius: 900px;
+}
+
+.cart-link{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
