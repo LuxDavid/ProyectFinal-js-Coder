@@ -43,12 +43,12 @@ return `
 }
 
 /*----------------------------------------------------------CARGAR PRODUCTOS DEL CARRITO--------------------------------------*/
-const cargarCarrito=(prod)=>{
+const cargarCarrito=({nombre,precio}=prod)=>{
 
 return `
 <li class="list-group-item d-flex  align-items-center">
-${prod.nombre}
-<span class="badge bg-primary rounded-pill">$${prod.precio}</span>
+${nombre}
+<span class="badge bg-primary rounded-pill">$${precio}</span>
 </li>
 
 `
@@ -92,4 +92,4 @@ if(containerCarrito.innerHTML==carritoCargado()){
 
 let terminarCompra=document.getElementById('finalizar');
 
-console.log(terminarCompra);
+
