@@ -30,4 +30,13 @@ const recuperarCarrito = () => {
 
 }
 
+const formInputs=document.querySelector('#inputs-forms');
 
+const campos=document.querySelectorAll('.form-control');
+
+const nombre1=document.querySelector('#exampleInputEmail1');
+const nombre2=document.querySelector('#exampleInputEmail2');
+const direccion1=document.querySelector('#exampleInputDirection1');
+const direccion2=document.querySelector('#exampleInputDirection2');
+const numero1=document.querySelector('#exampleInputCellphone1');
+const numero2=document.querySelector('#exampleInputCellphone2');
