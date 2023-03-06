@@ -5,6 +5,8 @@ recuperarCarrito();
 
 const containerCarrito=document.querySelector('#container-carrito');
 
+const totalPago=document.querySelector('#container-total');
+
 const carritoVacio=()=>{
 
 return`
@@ -46,7 +48,7 @@ const cargarCarrito=(prod)=>{
 return `
 <li class="list-group-item d-flex  align-items-center">
 ${prod.nombre}
-<span class="badge bg-primary rounded-pill">14</span>
+<span class="badge bg-primary rounded-pill">$${prod.precio}</span>
 </li>
 
 `
@@ -65,5 +67,29 @@ filaProductos.innerHTML=compra;
 
 carrito.length >=1 ? containerCarrito.innerHTML=carritoCargado() : containerCarrito.innerHTML=carritoVacio();
 
-containerCarrito.innerHTML==carritoCargado()&&crearElementos(carrito);
+if(containerCarrito.innerHTML==carritoCargado()){
 
+    crearElementos(carrito);
+
+    const mostrarPago=(arr)=>{
+
+        let total=arr.reduce((acc,prod)=>acc+prod.precio,0);
+        
+        return `
+        <div class="card" id='pago'>
+          <h5 class="card-header header-total">Total a pagar</h5>
+          <div class="card-body">
+            <h5 class="card-title">$${total}MXN</h5>
+            <a href="../pages/inputFinish.html" class="btn btn-dark" id='finalizar'>Terminar compra</a>
+          </div>
+        </div>
+        `
+        }
+
+
+    totalPago.innerHTML=mostrarPago(carrito);
+}
+
+let terminarCompra=document.getElementById('finalizar');
+
+console.log(terminarCompra);
