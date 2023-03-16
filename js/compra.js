@@ -16,11 +16,14 @@ return `
 `
 }
 
-const agregarElementos=(array)=>{
+const agregarElementos= async ()=>{
+
+const recibirProductos= await fetch("../data.json");
+const productosConvert= await recibirProductos.json();
 
 let productos="";
 
-array.forEach(element => {
+productosConvert.forEach(element => {
     
 productos+=crearProductos(element);
 containerP.innerHTML=productos;
@@ -29,24 +32,22 @@ containerP.innerHTML=productos;
 
 }
 
-agregarElementos(products);
+agregarElementos().then(data=>{
 
-/*--------------------------------------------------------------FIN DE CREACION DE PRODUCTOS---------------------------------------*/
+  for (const boton of productCard) {
 
+    boton.addEventListener('click',()=>{
+    
+    let agregar=products.find(prod=>prod.id == boton.id);
+    
+    carrito.push(agregar);
+    guardoCarrito();
+    
+    }
+    )}
 
-/*--------------------------------------------------------------INICIO AGREGAR PRODUCTOS AL CARRITO---------------------------------------*/
+})
 
-for (const boton of productCard) {
- 
-  boton.addEventListener('click',()=>{
-
-let agregar=products.find(prod=>prod.id == boton.id);
-
-carrito.push(agregar);
-guardoCarrito();
-
-}
-)}
 
 /*--------------------------------------------------------------FIN AGREGAR PRODUCTOS AL CARRITO---------------------------------------*/
 
@@ -55,13 +56,8 @@ guardoCarrito();
 const guardoCarrito=()=>{
   carrito.length>0 &&  localStorage.setItem("carrito", JSON.stringify(carrito))
   
-  }
-
- 
+}
 
 recuperarCarrito();
-
-
-
 
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/

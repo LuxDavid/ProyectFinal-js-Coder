@@ -1,12 +1,4 @@
-const validarFormulario=(e)=>{
-
-    e.preventDefault();
-    
-    console.log(e);
-    
-    }
-    
-    formInputs.addEventListener('submit',(e)=>{
+formInputs.addEventListener('submit',(e)=>{
     
     e.preventDefault();
     
@@ -19,8 +11,6 @@ const validarFormulario=(e)=>{
     }
     
     })
-    
-    // localStorage.getItem('carrito');
     
     /*------------------------------------------------------------------------------------------------------*/
     
