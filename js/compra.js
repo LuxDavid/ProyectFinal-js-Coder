@@ -30,6 +30,8 @@ containerP.innerHTML=productos;
 
 });
 
+return productosConvert
+
 }
 
 agregarElementos().then(data=>{
@@ -38,7 +40,7 @@ agregarElementos().then(data=>{
 
     boton.addEventListener('click',()=>{
     
-    let agregar=products.find(prod=>prod.id == boton.id);
+    let agregar=data.find(prod=>prod.id == boton.id);
     
     carrito.push(agregar);
     guardoCarrito();
