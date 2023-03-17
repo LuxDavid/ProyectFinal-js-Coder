@@ -6,6 +6,8 @@ let dia=new Date();
 
 const productCard=document.getElementsByClassName('comida');
 
+const detailCards=document.getElementsByClassName('detalle')
+
 /*--------------------------------------------------------------INICIO FUNCION PARA RECUPERAR EL CARRITO---------------------------------------*/
 
 const recuperarCarrito = () => {

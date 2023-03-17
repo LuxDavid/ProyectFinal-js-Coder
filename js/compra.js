@@ -11,6 +11,7 @@ return `
   <h5 class="card-title">${nombre}</h5>
   <p class="card-text">$ ${precio}</p>
   <a href="#" id="${id}" class="btn btn-dark comida">Agregar al carrito</a>
+  <a href="#" id="${id}" class="btn btn-danger detalle">Detalle del producto</a>
 </div>
 </div>
 `
@@ -46,7 +47,25 @@ agregarElementos().then(data=>{
     guardoCarrito();
     notificacion("Agregado al carrito", 'green','success')
     }
-    )}
+
+
+)}
+
+for( const prodDetail of detailCards){
+
+prodDetail.addEventListener('click',()=>{
+
+let detail=data.find(prod=>prod.id == prodDetail.id);
+
+  Swal.fire({
+    title: detail.nombre,
+    text:`Segundo`,
+    imageUrl: `../images/${detail.image}`,
+    imageWidth: 400,
+    imageHeight: 200,
+  })
+})
+}
 
 }).catch(err=>notificacion('Ocurrio un error','red','error'))
 
