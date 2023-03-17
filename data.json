@@ -1,7 +1,7 @@
 [
   {
     "id":1,
-    "nombre":"pizza hawaina",
+    "nombre":"Pizza hawaina",
     "precio":120,
     "oferta":false,
     "image":"pizza-hawaiana.jpg"
@@ -15,22 +15,92 @@
   },
   {
     "id":3,
-    "nombre":"pizza carbonara",
+    "nombre":"Pizza carbonara",
     "precio":169,
     "oferta":"Miercoles",
     "image":"pizza-carbonara.jpg"
   },{
     "id":4,
-    "nombre":"pizza cuatro quesos",
+    "nombre":"Pizza cuatro quesos",
     "precio":175,
     "oferta":"Miercoles",
     "image":"pizza-4-quesos.jpg"
   },{
     "id":5,
-    "nombre":"pizza mexicana",
+    "nombre":"Pizza mexicana",
     "precio":140,
     "oferta":"Lunes",
     "image":"pizza-mexicana.jpg"
+  },
+  {
+    "id":6,
+    "nombre":"Pizza de champiñones",
+    "precio":98,
+    "oferta":false,
+    "image":"pizza-champinones.jpg"
+  },
+  {
+    "id":7,
+    "nombre":"Pizza marinara",
+    "precio":190,
+    "oferta":"Sabado",
+    "image":"pizza-marinara.jpg"
+  },
+  {
+    "id":8,
+    "nombre":"Pizza napolitana",
+    "precio":250,
+    "oferta":false,
+    "image":"pizza-napolitana.jpg"
+  },
+  {
+    "id":9,
+    "nombre":"Pizza de peperoni",
+    "precio":105,
+    "oferta":"Martes",
+    "image":"pizza-peperoni.jpg"
+  },
+  {
+    "id":10,
+    "nombre":"Pizza vegetariana",
+    "precio":100,
+    "oferta":"Jueves",
+    "image":"pizza-vegetariana.jpg"
+  },
+  {
+    "id":11,
+    "nombre":"Coca cola",
+    "precio":17,
+    "oferta":false,
+    "image":"Soda-cocacola.jpg"
+  },
+  {
+    "id":12,
+    "nombre":"Soda italaiana",
+    "precio":35,
+    "oferta":false,
+    "image":"soda-italiana.jpg"
+  },
+  {
+    "id":13,
+    "nombre":"Limonada",
+    "precio":20,
+    "oferta":false,
+    "image":"limonada.jpg"
+  },
+  {
+    "id":14,
+    "nombre":"Tiramisú",
+    "precio":80,
+    "oferta":false,
+    "image":"tiramisu.jpg"
+  },
+  {
+    "id":15,
+    "nombre":"Rebanada de pastel de chocolate",
+    "precio":69,
+    "oferta":"Domingo",
+    "image":"pastel-chocolate.jpg"
   }
-
+  
 ]

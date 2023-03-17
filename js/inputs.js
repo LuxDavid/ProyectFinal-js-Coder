@@ -8,6 +8,8 @@ formInputs.addEventListener('submit',(e)=>{
         localStorage.removeItem('carrito');
         window.location.href='../index.html';
     }
+    }else{
+        notificacion('Porfavor llena correctamente todos los campos','#e5e619','warning')
     }
     
     })
@@ -26,6 +28,7 @@ formInputs.addEventListener('submit',(e)=>{
     if(verificacion.length==6){
     return true;
     }else{
+    notificacion('Porfavor llena correctamente todos los campos','#e5e619','warning')
     return false
     }
     

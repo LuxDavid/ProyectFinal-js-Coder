@@ -47,8 +47,10 @@ const cargarCarrito=({nombre,precio}=prod)=>{
 
 return `
 <li class="list-group-item d-flex  align-items-center">
-${nombre}
-<span class="badge bg-primary rounded-pill">$${precio}</span>
+<span class="cantidad">${nombre}</span>
+<span class="cantidad">$${precio}</span>
+<span class="cantidad">Cantidad añadida : ${precio}</span>
+<span class="badge bg-danger rounded-pill">X</span>
 </li>
 
 `

@@ -44,11 +44,11 @@ agregarElementos().then(data=>{
     
     carrito.push(agregar);
     guardoCarrito();
-    
+    notificacion("Agregado al carrito", 'green','success')
     }
     )}
 
-})
+}).catch(err=>notificacion('Ocurrio un error','red','error'))
 
 
 /*--------------------------------------------------------------FIN AGREGAR PRODUCTOS AL CARRITO---------------------------------------*/
@@ -63,3 +63,5 @@ const guardoCarrito=()=>{
 recuperarCarrito();
 
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/
+
+
