@@ -58,8 +58,8 @@ prodDetail.addEventListener('click',()=>{
 let detail=data.find(prod=>prod.id == prodDetail.id);
 
   Swal.fire({
-    title: detail.nombre,
-    text:`Segundo`,
+    title: `${detail.nombre} (${detail.peso})`,
+    text: detail.descripcion,
     imageUrl: `../images/${detail.image}`,
     imageWidth: 400,
     imageHeight: 200,

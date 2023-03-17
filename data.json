@@ -4,103 +4,133 @@
     "nombre":"Pizza hawaina",
     "precio":120,
     "oferta":false,
-    "image":"pizza-hawaiana.jpg"
+    "image":"pizza-hawaiana.jpg",
+    "peso":"500G",
+    "descripcion":"Pizza familiar con: piña,jamon y queso 100% mozzarella"
   },
   {
     "id":2,
     "nombre":"Pizza detroit style",
     "precio":180,
     "oferta":false,
-    "image":"pizza-detroit.jpg"
+    "image":"pizza-detroit.jpg",
+    "peso":"480G",
+    "descripcion":"Pizza con: 6 porciones, masa gruesa, queso mozzarella, asiago, parmesano y peperoni,  "
   },
   {
     "id":3,
     "nombre":"Pizza carbonara",
     "precio":169,
     "oferta":"Miercoles",
-    "image":"pizza-carbonara.jpg"
+    "image":"pizza-carbonara.jpg",
+    "peso":"600G",
+    "descripcion":"Pizza familiar con: 4 quesos, jamon, tociono y 2 huevos"
   },{
     "id":4,
     "nombre":"Pizza cuatro quesos",
     "precio":175,
     "oferta":"Miercoles",
-    "image":"pizza-4-quesos.jpg"
+    "image":"pizza-4-quesos.jpg",
+    "peso":"530G",
+    "descripcion":"Piiza familiar con: queso parmesano, asiago, mozzarella, chedar con una salsa de crema fresca"
   },{
     "id":5,
     "nombre":"Pizza mexicana",
     "precio":140,
     "oferta":"Lunes",
-    "image":"pizza-mexicana.jpg"
+    "image":"pizza-mexicana.jpg",
+    "peso":"480G",
+    "descripcion":"Pizza familiar con : chorizo, cebolla morada, queso mozzaralla, pimiento verde y jalapeño"
   },
   {
     "id":6,
     "nombre":"Pizza de champiñones",
     "precio":98,
     "oferta":false,
-    "image":"pizza-champinones.jpg"
+    "image":"pizza-champinones.jpg",
+    "peso":"480G",
+    "descripcion":"Pizza familiar con : queso mozzarella, champiñones frescos, hiervas finas y queso chedarar rallado en los bordes"
   },
   {
     "id":7,
     "nombre":"Pizza marinara",
     "precio":190,
     "oferta":"Sabado",
-    "image":"pizza-marinara.jpg"
+    "image":"pizza-marinara.jpg",
+    "peso":"450G",
+    "descripcion":"Pizza familiar con: base de salsa de tomate, orégano, ajo y hiervas finas"
   },
   {
     "id":8,
     "nombre":"Pizza napolitana",
     "precio":250,
     "oferta":false,
-    "image":"pizza-napolitana.jpg"
+    "image":"pizza-napolitana.jpg",
+    "peso":"520G",
+    "descripcion":"Pizza familiar con: masa 100% napolitana, queso mozzarella y burrata completa en el centro"
   },
   {
     "id":9,
     "nombre":"Pizza de peperoni",
     "precio":105,
     "oferta":"Martes",
-    "image":"pizza-peperoni.jpg"
+    "image":"pizza-peperoni.jpg",
+    "peso":"450G",
+    "descripcion":"Pizza familiar con: peperoni y queso 100% mozzarella"
   },
   {
     "id":10,
     "nombre":"Pizza vegetariana",
     "precio":100,
     "oferta":"Jueves",
-    "image":"pizza-vegetariana.jpg"
+    "image":"pizza-vegetariana.jpg",
+    "peso":"430G",
+    "descripcion":"Piiza familiar con: queso vegano, aceituna negra, pimineto verde, pimiento rojo y tomate natural"
   },
   {
     "id":11,
     "nombre":"Coca cola",
     "precio":17,
     "oferta":false,
-    "image":"soda-cocacola.jpg"
+    "image":"soda-cocacola.jpg",
+    "peso": "355ml",
+    "descripcion":"Lata pequeña de coca cola"
   },
   {
     "id":12,
     "nombre":"Soda italaiana",
     "precio":35,
     "oferta":false,
-    "image":"soda-italiana.jpg"
+    "image":"soda-italiana.jpg",
+    "peso":"385ml",
+    "descripcion":"Soda italiana con agua carbonatada y jarame de mora azul"
   },
   {
     "id":13,
     "nombre":"Limonada",
     "precio":20,
     "oferta":false,
-    "image":"limonada.jpg"
-  },
+    "image":"limonada.jpg",
+    "peso":"250ml",
+    "descripcion":"Limonada natural endulzada con azucar y trozos de limon fresco"
+    },
   {
     "id":14,
     "nombre":"Tiramisú",
     "precio":80,
     "oferta":false,
-    "image":"tiramisu.jpg"
+    "image":"tiramisu.jpg",
+    "peso":"50G",
+    "descripcion":"Postre casero que consite en un biscocho a base de cafe, mascarpone y crema de chocolate"
   },
   {
     "id":15,
     "nombre":"Rebanada de pastel de chocolate (400gm)",
     "precio":69,
     "oferta":"Domingo",
-    "image":"pastel-chocolate.jpg"
+    "image":"pastel-chocolate.jpg",
+    "peso":"80G",
+    "descripcion":"Rebanada de pastel de chocolate con chocolate negro y blanco"
   }
   
 ]
