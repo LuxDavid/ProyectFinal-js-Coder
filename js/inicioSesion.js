@@ -1,18 +1,17 @@
-localStorage.setItem("users",JSON.stringify(usuarios))
+recuperarUsers();
 
 const login=(user)=>localStorage.setItem("users", JSON.stringify(user));
 
 formSesion.addEventListener("submit",(e)=>{
 
+
 e.preventDefault();
 
-const usuariosRegistrados=JSON.parse(localStorage.getItem('users'));
+if(localStorage.getItem('users')){
 
 const dataUser={email:sesionCorreo.value,password:sesionPasword.value};
 
 const errorEmail=usuariosRegistrados.find(user=>user.email === sesionCorreo.value);
-
-const errorPasword=usuariosRegistrados.find(user=>user.password === sesionPasword.value);
 
 const busquedaUsuario=usuariosRegistrados.find(user=>user.email === dataUser.email && user.password === dataUser.password);
 
@@ -34,7 +33,10 @@ else if(sesionCorreo.value.length >1 && sesionPasword.value.length >1 && busqued
     notificacion("Iniciando sesion","pink","success");
 }
 
+}
+else{
+    notificacion("Usuario debes registrarte primero","black","info")
+}
+
 })
 
-// console.log(errorEmail == undefined);
-// console.log(busquedaUsuario == undefined);

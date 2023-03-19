@@ -14,34 +14,7 @@ formInputs.addEventListener('submit',(e)=>{
     
     })
     
-    /*------------------------------------------------------------------------------------------------------*/
     
-    const infoCampos=(arr)=>{
-    
-    let verificacion=[];
-    
-    for (const campo of arr) {
-    
-    longitud(campo,verificacion);
-    }
-    
-    if(verificacion.length==6){
-    return true;
-    }else{
-    notificacion('Porfavor llena correctamente todos los campos','#e5e619','warning')
-    return false
-    }
-    
-    }
-    
-    /*------------------------------------------------------------------------------------------------------*/
-    const longitud=(dato,variable)=>{
-    
-    if(dato.value.length !='' && dato.value.length>=1){
-    variable.push(dato.value)
-    }
-    
-    }
 
 
 

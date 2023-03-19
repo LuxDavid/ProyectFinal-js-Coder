@@ -27,8 +27,11 @@ const recuperarCarrito = () => {
 
 /*--------------------------------------------------------------FIN FUNCION PARA RECUPERAR EL CARRITO---------------------------------------*/
 
+/*-------------------------------------------------------------- INICO VARIABLES PARA LA VALIDACION DE FORMULARIOS---------------------------------------*/
 
 const formInputs=document.querySelector('#inputs-forms');
+
+const formCheckin=document.getElementById('inputs-forms-checkin');
 
 const campos=document.querySelectorAll('.form-control');
 
@@ -42,6 +45,9 @@ const numero2=document.querySelector('#exampleInputCellphone2');
 const sesionCorreo=document.getElementById('correo-user');
 const sesionPasword=document.getElementById('correo-pasword');
 const formSesion=document.getElementById('form-login');
+
+/*-------------------------------------------------------------- FIN VARIABLES PARA LA VALIDACION DE FORMULARIOS---------------------------------------*/
+
 
 /*--------------------------------------------------------------INICIO FUNCION PARA NOTIFICAR QUE SE AGREGO AL CARRITO---------------------------------------*/
 
@@ -63,7 +69,9 @@ const notificacion = (notificacion,color,icono) => {
   /*--------------------------------------------------------------FIN FUNCION PARA NOTIFICAR QUE SE AGREGO AL CARRITO---------------------------------------*/
 
 
-const usuarios=[
+  /*-------------------------------------------------INICIO VARIABLES PARA LA SIMULACION DE UNA BASE DE DATOS CON INFORMACION DE USUARIOS--------------*/
+
+let usuarios=[
 {nombre:"Brayan David",
 apellido:"Domino Diaz",
 email:"Brayan2525@hotmail.com",
@@ -86,3 +94,54 @@ numero:2626789851,
 direccion:"calle franchesco 1920",
 },
 ]
+
+const usuariosRegistrados=JSON.parse(localStorage.getItem('users'));
+
+const recuperarUsers = () => {
+
+    let misUsuarios = JSON.parse(localStorage.getItem("users"))
+    if (misUsuarios) {
+
+        usuarios=[]
+        misUsuarios.forEach(element => {
+            
+            usuarios.push(element)
+        });
+
+        
+    }
+
+}
+
+ /*-------------------------------------------------FIN VARIABLES PARA LA SIMULACION DE UNA BASE DE DATOS CON INFORMACION DE USUARIOS--------------*/
+
+ 
+  /*------------------------------------------------- INICO FUNCIONES PARA LA VALIDACION DE FORMULARIOS -----------------------------------*/
+
+ const infoCampos=(arr)=>{
+    
+    let verificacion=[];
+    
+    for (const campo of arr) {
+    
+    longitud(campo,verificacion);
+    }
+    
+    if(verificacion.length==6){
+    return true;
+    }else{
+    notificacion('Porfavor llena correctamente todos los campos','#e5e619','warning')
+    return false
+    }
+    
+    }
+    
+    const longitud=(dato,variable)=>{
+    
+    if(dato.value.length !='' && dato.value.length>=1){
+    variable.push(dato.value)
+    }
+    
+    }
+
+      /*------------------------------------------------- INICO FUNCIONES PARA LA VALIDACION DE FORMULARIOS -----------------------------------*/
