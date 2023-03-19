@@ -2,7 +2,7 @@ formInputs.addEventListener('submit',(e)=>{
     
     e.preventDefault();
     
-    if(nombre1.value === nombre2.value && direccion1.value==direccion2.value && numero1.value==numero2.value){
+    if(nombre1.value.toLowerCase() === nombre2.value.toLowerCase() && direccion1.value.toLowerCase()==direccion2.value.toLowerCase() && numero1.value==numero2.value){
     
     if(infoCampos(campos)){
         localStorage.removeItem('carrito');
