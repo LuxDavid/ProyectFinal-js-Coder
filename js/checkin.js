@@ -2,36 +2,39 @@ recuperarUsers();
 
 formCheckin.addEventListener('submit',(e)=>{
 
-e.preventDefault()
-    
-if(infoCampos(campos)){
-    
-const nuevoUsuario={
-nombre:campos[0].value,
-apellido:campos[1].value,
-email:campos[2].value,
-password:campos[3].value,
-numero:campos[4].value,
-direccion:campos[5].value,
-}
+e.preventDefault();
 
 localStorage.setItem('users',JSON.stringify(usuarios));
 
 const usuariosRegistro=JSON.parse(localStorage.getItem('users'));
 
-const usuarioAgregado=usuariosRegistro.find(user=>user == nuevoUsuario);
+const nuevoUsuario={
+    nombre:campos[0].value,
+    apellido:campos[1].value,
+    email:campos[2].value,
+    password:campos[3].value,
+    numero:campos[4].value,
+    direccion:campos[5].value,
+    }
 
-if(usuarioAgregado == undefined){
+const usuarioAgregado=usuariosRegistro.find(user=>user.email == nuevoUsuario.email);
+
+console.log(nuevoUsuario);
+console.log(usuarioAgregado);
+    
+
+if(infoCampos(campos)){
+    
+if(usuarioAgregado === undefined){
 
 usuarios.push(nuevoUsuario);
 localStorage.setItem('users',JSON.stringify(usuarios));
 recuperarUsers();
 
-}else{
+
+}else if(usuarioAgregado){
 console.log('Ya estas registrado');
 }
-
-console.log(usuarios);
 
 }
 else{
