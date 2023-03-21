@@ -9,6 +9,10 @@ const productCard=document.getElementsByClassName('comida');
 const detailCards=document.getElementsByClassName('detalle');
 
 
+
+const barraLateral=document.getElementById('lateral');
+
+
 /*--------------------------------------------------------------INICIO FUNCION PARA RECUPERAR EL CARRITO---------------------------------------*/
 
 const recuperarCarrito = () => {
@@ -145,3 +149,52 @@ const recuperarUsers = () => {
     }
 
       /*------------------------------------------------- INICO FUNCIONES PARA LA VALIDACION DE FORMULARIOS -----------------------------------*/
+
+      const recuperarPassword=document.getElementById('recuperar-password');
+
+      /*--------------------------------------------------- INICIO DE FUNCION PARA MANTENER LA SESION ACTIVA----------------------------------*/
+
+      const sesionActiva=()=>{
+
+            const usuarioIniciado=JSON.parse(localStorage.getItem('activeUser'));
+
+            const navMenu=document.getElementById('navegation-options');
+
+            let nameUser=document.createElement('li');
+            nameUser.className='nav-link';
+            nameUser.innerText=usuarioIniciado.nombre;
+
+            navMenu.append(nameUser);
+            barraLateral.remove();
+
+
+        
+      }
+
+      const sesionActivaTwo=()=>{
+
+        const usuarioIniciado=JSON.parse(localStorage.getItem('activeUser'));
+
+        const navMenu=document.getElementById('navegation-options');
+
+        let nameUser=document.createElement('li');
+        nameUser.className='nav-link';
+        nameUser.innerText=usuarioIniciado.nombre;
+
+        navMenu.append(nameUser);
+
+        navMenu.id='cerrar-sesion';
+
+        navMenu.addEventListener('click',()=>{
+            Swal.fire({
+                title: 'Sweet!',
+                text: 'Modal with a custom image.',
+                imageUrl: 'https://unsplash.it/400/200',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+              })
+        })
+    
+  }
+       /*--------------------------------------------------- FIN DE FUNCION PARA MANTENER LA SESION ACTIVA----------------------------------*/

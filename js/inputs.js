@@ -1,3 +1,7 @@
+if(localStorage.getItem('activeUser')){
+    sesionActiva();
+}
+
 formInputs.addEventListener('submit',(e)=>{
     
     e.preventDefault();

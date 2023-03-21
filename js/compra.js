@@ -1,3 +1,5 @@
+recuperarUsers();
+
 /*--------------------------------------------------------------INICIO DE CREACION DE PRODUCTOS---------------------------------------*/
 
 let containerP=document.querySelector('#container-products');
@@ -82,5 +84,9 @@ const guardoCarrito=()=>{
 recuperarCarrito();
 
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/
+
+if(localStorage.getItem('activeUser')){
+  sesionActivaTwo();
+}
 
 
