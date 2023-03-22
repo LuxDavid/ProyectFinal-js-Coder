@@ -96,7 +96,7 @@ if(containerCarrito.innerHTML==carritoCargado()){
 let terminarCompra=document.getElementById('finalizar');
 
 if(localStorage.getItem('activeUser')){
-  sesionActivaTwo();
+  sesionActiva();
 }
 
 

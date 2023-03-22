@@ -17,9 +17,3 @@ formInputs.addEventListener('submit',(e)=>{
     }
     
     })
-    
-    
-
-
-
-

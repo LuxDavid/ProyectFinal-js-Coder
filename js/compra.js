@@ -86,7 +86,7 @@ recuperarCarrito();
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/
 
 if(localStorage.getItem('activeUser')){
-  sesionActivaTwo();
+  sesionActiva();
 }
 
 

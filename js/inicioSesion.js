@@ -35,6 +35,8 @@ else if(sesionCorreo.value.length >1 && sesionPasword.value.length >1 && busqued
 
     if(localStorage.getItem('activeUser')){
         sesionActiva();
+        barraLateral.remove();
+        window.location.href='../index.html';
     }
 }
 
@@ -109,4 +111,5 @@ pedirCorreo();
 
 if(localStorage.getItem('activeUser')){
     sesionActiva();
+    barraLateral.remove();
 }

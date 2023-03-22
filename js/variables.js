@@ -156,23 +156,6 @@ const recuperarUsers = () => {
 
       const sesionActiva=()=>{
 
-            const usuarioIniciado=JSON.parse(localStorage.getItem('activeUser'));
-
-            const navMenu=document.getElementById('navegation-options');
-
-            let nameUser=document.createElement('li');
-            nameUser.className='nav-link';
-            nameUser.innerText=usuarioIniciado.nombre;
-
-            navMenu.append(nameUser);
-            barraLateral.remove();
-
-
-        
-      }
-
-      const sesionActivaTwo=()=>{
-
         const usuarioIniciado=JSON.parse(localStorage.getItem('activeUser'));
 
         const navMenu=document.getElementById('navegation-options');
@@ -181,20 +164,27 @@ const recuperarUsers = () => {
         nameUser.className='nav-link';
         nameUser.innerText=usuarioIniciado.nombre;
 
+        nameUser.id="usuarionON";
+
         navMenu.append(nameUser);
 
-        navMenu.id='cerrar-sesion';
+    let usuarioON=document.getElementById("usuarionON");
 
-        navMenu.addEventListener('click',()=>{
+        usuarioON.addEventListener('click',()=>{
+
             Swal.fire({
-                title: 'Sweet!',
-                text: 'Modal with a custom image.',
-                imageUrl: 'https://unsplash.it/400/200',
-                imageWidth: 400,
-                imageHeight: 200,
-                imageAlt: 'Custom image',
+                title: '¿Quiera cerrar tu sesion?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Salir!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                localStorage.removeItem('activeUser');
+                window.location.href='../index.html';
+                }
               })
         })
-    
   }
        /*--------------------------------------------------- FIN DE FUNCION PARA MANTENER LA SESION ACTIVA----------------------------------*/

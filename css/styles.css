@@ -409,3 +409,7 @@ width: 28%;
 .btn-danger{
 margin-top: 6px;
 }
+
+#usuarionON{
+cursor: pointer;
+}
