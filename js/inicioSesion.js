@@ -30,14 +30,31 @@ else if( errorEmail === undefined || busquedaUsuario === undefined){
 }
 else if(sesionCorreo.value.length >1 && sesionPasword.value.length >1 && busquedaUsuario.email == dataUser.email && busquedaUsuario.password == dataUser.password){
 
-    notificacion("Iniciando sesion","pink","success");
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'Iniciando sesion'
+  }).then((data)=>{
+
     localStorage.setItem('activeUser',JSON.stringify(busquedaUsuario));
 
     if(localStorage.getItem('activeUser')){
         sesionActiva();
         barraLateral.remove();
+        localStorage.removeItem('carrito');
         window.location.href='../index.html';
     }
+
+
+  })
+    
 }
 
 }

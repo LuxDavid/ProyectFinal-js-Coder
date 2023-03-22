@@ -1,5 +1,7 @@
 const carrito = [];
 
+const carritoSesion=[];
+
 const semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
 let dia=new Date();
@@ -182,6 +184,7 @@ const recuperarUsers = () => {
               }).then((result) => {
                 if (result.isConfirmed) {
                 localStorage.removeItem('activeUser');
+                localStorage.removeItem('carrito');
                 window.location.href='../index.html';
                 }
               })
