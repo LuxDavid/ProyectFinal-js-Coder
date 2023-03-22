@@ -48,6 +48,14 @@ agregarElementos().then(data=>{
     carrito.push(agregar);
     guardoCarrito();
     notificacion("Agregado al carrito", 'green','success')
+
+    if( localStorage.getItem('activeUser')){
+
+    carritoSesion.push(agregar); 
+    carritoSesion.length >0 && localStorage.setItem("carritoSesion", JSON.stringify(carritoSesion));
+    }
+
+    
     }
 
 
@@ -77,7 +85,8 @@ let detail=data.find(prod=>prod.id == prodDetail.id);
 /*--------------------------------------------------------------INICIO RECUPERAR CARRITO---------------------------------------*/
 
 const guardoCarrito=()=>{
-  carrito.length>0 &&  localStorage.setItem("carrito", JSON.stringify(carrito))
+  carrito.length>0 &&  localStorage.setItem("carrito", JSON.stringify(carrito));
+
   
 }
 
