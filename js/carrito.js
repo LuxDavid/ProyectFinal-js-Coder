@@ -77,7 +77,7 @@ if(containerCarrito.innerHTML==carritoCargado()){
 
     const mostrarPago=(arr)=>{
 
-        let total=arr.reduce((acc,prod)=>acc+prod.precio,0);
+        let total=arr.reduce((acc,prod)=>acc+(prod.precio * prod.cantidad),0);
         
         return `
         <div class="card" id='pago'>
