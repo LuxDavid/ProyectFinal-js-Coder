@@ -45,13 +45,13 @@ return `
 }
 
 /*----------------------------------------------------------CARGAR PRODUCTOS DEL CARRITO--------------------------------------*/
-const cargarCarrito=({nombre,precio}=prod)=>{
+const cargarCarrito=({nombre,precio,cantidad}=prod)=>{
 
 return `
 <li class="list-group-item d-flex  align-items-center">
 <span class="cantidad">${nombre}</span>
-<span class="cantidad">$${precio}</span>
-<span class="cantidad">Cantidad añadida : ${precio}</span>
+<span class="cantidad">$${precio * cantidad}</span>
+<span class="cantidad">Cantidad añadida : ${cantidad}</span>
 <span class="badge bg-danger rounded-pill">X</span>
 </li>
 

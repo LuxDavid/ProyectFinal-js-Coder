@@ -47,25 +47,40 @@ agregarElementos().then(data=>{
     
     let agregar=data.find(prod=>prod.id == boton.id);
 
-    if(agregar.oferta == busquedaOferta){
-      agregar.precio = agregar.precio - 40;
-      }
- 
-    carrito.push(agregar);
+    const productSearch=carrito.findIndex(pruduct=>pruduct.id == agregar.id);
+
+    if(productSearch === -1){
+
+  agregar.cantidad= 1
+
+  if(agregar.oferta == busquedaOferta){
+    agregar.precio = agregar.precio - 40;
+    }
+
+      carrito.push(agregar);
+      guardoCarrito();
+      notificacion("Agregado al carrito", 'green','success');
+
+      if( localStorage.getItem('activeUser')){
+
+        carritoSesion.push(agregar); 
+        carritoSesion.length >0 && localStorage.setItem("carritoSesion", JSON.stringify(carritoSesion));
+        }
+
+    }else if(productSearch >= 0){
+      
+    carrito[productSearch].cantidad +=1;
     guardoCarrito();
     notificacion("Agregado al carrito", 'green','success');
-
-    if( localStorage.getItem('activeUser')){
-
-    carritoSesion.push(agregar); 
-    carritoSesion.length >0 && localStorage.setItem("carritoSesion", JSON.stringify(carritoSesion));
+      
     }
 
     
     }
 
 
-)}
+)
+}
 
 for( const prodDetail of detailCards){
 
