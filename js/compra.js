@@ -90,8 +90,8 @@ const guardoCarrito=()=>{
   
 }
 
-recuperarCarrito();
-recuperarCarritoSesion();
+recuperarCarrito(carrito,"carrito");
+recuperarCarrito("carritoSesion",carritoSesion);
 
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/
 

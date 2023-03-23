@@ -1,5 +1,5 @@
 recuperarUsers();
-recuperarCarritoSesion();
+recuperarCarrito("carritoSesion",carritoSesion);
 
 const login=(user)=>localStorage.setItem("users", JSON.stringify(user));
 

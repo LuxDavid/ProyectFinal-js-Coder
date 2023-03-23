@@ -17,27 +17,13 @@ const barraLateral=document.getElementById('lateral');
 
 /*--------------------------------------------------------------INICIO FUNCION PARA RECUPERAR EL CARRITO---------------------------------------*/
 
-const recuperarCarrito = () => {
+const recuperarCarrito = (sesionParam,car) => {
 
-    let miCarrito = JSON.parse(localStorage.getItem("carrito"))
+    let miCarrito = JSON.parse(localStorage.getItem(sesionParam))
     if (miCarrito) {
 
         miCarrito.forEach(element => {
-            carrito.push(element)
-        });
-
-
-    }
-
-}
-
-const recuperarCarritoSesion = () => {
-
-    let miCarrito = JSON.parse(localStorage.getItem("carritoSesion"))
-    if (miCarrito) {
-
-        miCarrito.forEach(element => {
-            carritoSesion.push(element)
+            car.push(element)
         });
 
 
