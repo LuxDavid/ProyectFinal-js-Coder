@@ -72,12 +72,13 @@ agregarElementos().then(data=>{
     carrito[productSearch].cantidad +=1;
     guardoCarrito();
     notificacion("Agregado al carrito", 'green','success');
+
+    carritoSesion[productSearch].cantidad +=1;
+    carritoSesion.length >0 && localStorage.setItem("carritoSesion", JSON.stringify(carritoSesion));
       
     }
 
-    
     }
-
 
 )
 }
