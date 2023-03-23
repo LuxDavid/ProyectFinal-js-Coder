@@ -413,3 +413,11 @@ margin-top: 6px;
 #usuarionON{
 cursor: pointer;
 }
+
+.card-result{
+height: 20rem;
+}
+
+.card-title {
+    margin-bottom: 2.5rem !important;
+}

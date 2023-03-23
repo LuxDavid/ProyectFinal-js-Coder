@@ -84,7 +84,7 @@ if(containerCarrito.innerHTML==carritoCargado()){
           <h5 class="card-header header-total">Total a pagar</h5>
           <div class="card-body">
             <h5 class="card-title">$${total}MXN</h5>
-            <a href="../pages/inputFinish.html" class="btn btn-dark" id='finalizar'>Terminar compra</a>
+            <a href="inputFinish.html" class="btn btn-dark" id='finalizar'>Terminar compra</a>
           </div>
         </div>
         `
@@ -96,8 +96,11 @@ if(containerCarrito.innerHTML==carritoCargado()){
 
 let terminarCompra=document.getElementById('finalizar');
 
+
 if(localStorage.getItem('activeUser')){
   sesionActiva();
 }
+
+
 
 
