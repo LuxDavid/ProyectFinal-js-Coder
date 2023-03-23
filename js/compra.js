@@ -33,6 +33,8 @@ containerP.innerHTML=productos;
 
 });
 
+
+
 return productosConvert
 
 }
@@ -100,3 +102,4 @@ if(localStorage.getItem('activeUser')){
 }
 
 
+encontrarOfertas();
