@@ -46,10 +46,14 @@ agregarElementos().then(data=>{
     boton.addEventListener('click',()=>{
     
     let agregar=data.find(prod=>prod.id == boton.id);
-    
+
+    if(agregar.oferta == busquedaOferta){
+      agregar.precio = agregar.precio - 40;
+      }
+ 
     carrito.push(agregar);
     guardoCarrito();
-    notificacion("Agregado al carrito", 'green','success')
+    notificacion("Agregado al carrito", 'green','success');
 
     if( localStorage.getItem('activeUser')){
 
@@ -92,7 +96,7 @@ const guardoCarrito=()=>{
   
 }
 
-recuperarCarrito(carrito,"carrito");
+recuperarCarrito("carrito",carrito);
 recuperarCarrito("carritoSesion",carritoSesion);
 
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/

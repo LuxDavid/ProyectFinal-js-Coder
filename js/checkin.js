@@ -19,10 +19,6 @@ const nuevoUsuario={
 
 const usuarioAgregado=usuariosRegistro.find(user=>user.email == nuevoUsuario.email);
 
-console.log(nuevoUsuario);
-console.log(usuarioAgregado);
-    
-
 if(infoCampos(campos)){
     
 if(usuarioAgregado === undefined){

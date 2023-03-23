@@ -6,7 +6,13 @@ const productCard=document.getElementsByClassName('comida');
 
 const detailCards=document.getElementsByClassName('detalle');
 
+const semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
+let dia=new Date();
+
+const oferta=dia.getDay();
+
+const busquedaOferta=semana[oferta]
 
 const barraLateral=document.getElementById('lateral');
 
@@ -192,32 +198,26 @@ const recuperarUsers = () => {
 
        const encontrarOfertas= async ()=>{
 
-        const semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
-
-         let dia=new Date();
-
         const recibirProductos= await fetch("../data.json");
         const productosConvert= await recibirProductos.json();
         
-        const oferta=dia.getDay();
-      
-        const busquedaOferta=semana[oferta]
-      
         const filtracion=productosConvert.filter((prod)=>prod.oferta === busquedaOferta);
 
-        filtracion.forEach(prod=>{
+ if(filtracion){
 
-Toastify({
-  text: `La ${prod.nombre} esta en promocion el dia de hoy con un descuento de $40 pesos MXN`,
-  duration: 3000,
-  position: 'left',
-  gravity: 'bottom',
-  style: {
-    background: "linear-gradient(to right, #ccc, black)",
-  }
-}).showToast()
+    filtracion.forEach(prod=>{
 
-})
-
+        Toastify({
+          text: `La ${prod.nombre} esta en promocion el dia de hoy con un descuento de $40 pesos MXN agregala en tu carrito ahora mismo para obtener el descuento`,
+          duration: 3000,
+          position: 'left',
+          gravity: 'bottom',
+          style: {
+            background: "linear-gradient(to right, #ccc, black)",
+          }
+        }).showToast()
+        
+        })
+}
 
 }
