@@ -31,6 +31,20 @@ const recuperarCarrito = () => {
 
 }
 
+const recuperarCarritoSesion = () => {
+
+    let miCarrito = JSON.parse(localStorage.getItem("carritoSesion"))
+    if (miCarrito) {
+
+        miCarrito.forEach(element => {
+            carritoSesion.push(element)
+        });
+
+
+    }
+
+}
+
 /*--------------------------------------------------------------FIN FUNCION PARA RECUPERAR EL CARRITO---------------------------------------*/
 
 /*-------------------------------------------------------------- INICO VARIABLES PARA LA VALIDACION DE FORMULARIOS---------------------------------------*/

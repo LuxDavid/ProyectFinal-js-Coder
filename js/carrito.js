@@ -1,6 +1,7 @@
 
 recuperarCarrito();
 recuperarUsers();
+recuperarCarritoSesion();
 
 /*----------------------------------------------------------CARRITO VACIO--------------------------------------*/
 

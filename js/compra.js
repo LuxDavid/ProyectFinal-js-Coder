@@ -91,6 +91,7 @@ const guardoCarrito=()=>{
 }
 
 recuperarCarrito();
+recuperarCarritoSesion();
 
 /*--------------------------------------------------------------FIN RECUPERAR CARRITO CARRITO---------------------------------------*/
 

@@ -1,4 +1,5 @@
 recuperarUsers();
+recuperarCarritoSesion();
 
 const login=(user)=>localStorage.setItem("users", JSON.stringify(user));
 
@@ -49,6 +50,13 @@ else if(sesionCorreo.value.length >1 && sesionPasword.value.length >1 && busqued
         sesionActiva();
         barraLateral.remove();
         localStorage.removeItem('carrito');
+
+if(localStorage.getItem('carritoSesion')){
+
+carritoSesion.forEach(prod=> carrito.push(prod))
+localStorage.setItem('carrito',JSON.stringify(carrito));
+}
+
         window.location.href='../index.html';
     }
 
