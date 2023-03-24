@@ -139,4 +139,4 @@ if(localStorage.getItem('activeUser')){
     barraLateral.remove();
 }
 
-encontrarOfertas();
+
