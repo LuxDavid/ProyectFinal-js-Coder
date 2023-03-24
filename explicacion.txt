@@ -1,0 +1,34 @@
+Mi proyecto final consiste en una tienda en linea para la venta de productos que en este caso elegi las pizzas como tematica principal.
+
+Esta pagina incluye varias funciones de interactividad e informacion.
+
+Entre estas funciones se encuentran:
+
+1. Un registro opcional para los usuarios donde se valida si un existe o no, se hace una simulacion de una pequeña base de datos con los 
+usuarios utilizando localStorage.
+
+2.Tambien funciones como el poder registrarte y que si haz olvidado tu contraseña, si sabes tu correo electronico te sale una pequeña alerta
+durante algunos segundo con tu correo y la contraseña que utilizaste para registrarte.
+
+3. Si agregaste productos sin iniciar sesion se crea un carrito generico, que para finalizar la compra pedira algunos datos en un formulario
+donde se hace una pequeña verificacion de los datos y si todo esta correcto notificara que la compra se realizo y mostrara a donde se enviara
+y finalmente nos devuelve a la pagina principal.
+
+4.Tambien incluye una funcionalidad con tostify que busca en la base de datos JSON si algun producto con el atributo oferta coincide con el dia actual, y si 
+se encuentra una coincidencia nos mostrara un pequeño mensaje en la parte de abajo notificando que cierto producto esta en oferta y que tendra un descuento en
+su precio de $40.
+
+5. Cuando se inicia sesion el proceso de compra es similar pero si la sesion de usuario se encuentra activa, al final de la compra no pedira
+que rellenes un formulario para poder terminar la compra.
+
+6.Cuando el proceso de compra termina el carrito se vacia.
+
+7. Haciendo enfasis en el apartado de iniciar sesion, si el item con la sesion del usuario se encuentra activo en localStorage al momento de agregar productos
+se crea un carrito adicional que funciona a manera de respaldo para que si el usuario cierra su sesion sin terminar su compra, al momento de volver a abrir su sesion
+su carrito vuelva a llenarse con los productos que previamente habia llenado.
+
+8. Tambien se incluye la funcion del cerrar sesion para los usuarios.
+
+9. Esta la funcion para eliminar productos del carrito donde si se preciona en la x, la cantidad agregada se reduciera en 1, pero si llega a 0 se elimina del carrito
+
+10. En las targetas para agregar productos, cada targeta tambien cuenta con un boton para mostrar los detalles de cada producto por individual.

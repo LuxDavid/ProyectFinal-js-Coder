@@ -26,10 +26,11 @@ if(usuarioAgregado === undefined){
 usuarios.push(nuevoUsuario);
 localStorage.setItem('users',JSON.stringify(usuarios));
 recuperarUsers();
+window.location.href='../index.html';
 
 
 }else if(usuarioAgregado){
-console.log('Ya estas registrado');
+notificacion('Ya estas registrado','black','info');
 }
 
 }

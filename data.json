@@ -64,7 +64,7 @@
     "id":8,
     "nombre":"Pizza napolitana",
     "precio":250,
-    "oferta":false,
+    "oferta":"Viernes",
     "image":"pizza-napolitana.jpg",
     "peso":"520G",
     "descripcion":"Pizza familiar con: masa 100% napolitana, queso mozzarella y burrata completa en el centro"
