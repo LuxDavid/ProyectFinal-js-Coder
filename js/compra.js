@@ -1,5 +1,6 @@
 recuperarUsers();
 
+
 /*--------------------------------------------------------------INICIO DE CREACION DE PRODUCTOS---------------------------------------*/
 
 let containerP=document.querySelector('#container-products');
@@ -73,8 +74,10 @@ agregarElementos().then(data=>{
     guardoCarrito();
     notificacion("Agregado al carrito", 'green','success');
 
-    carritoSesion[productSearch].cantidad +=1;
+   if(localStorage.getItem('activeUser')){
+    carritoSesion[productSearch].cantidad = carrito[productSearch].cantidad
     carritoSesion.length >0 && localStorage.setItem("carritoSesion", JSON.stringify(carritoSesion));
+   }
       
     }
 

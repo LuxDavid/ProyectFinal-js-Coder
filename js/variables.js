@@ -16,7 +16,6 @@ const busquedaOferta=semana[oferta]
 
 const barraLateral=document.getElementById('lateral');
 
-
 /*--------------------------------------------------------------INICIO FUNCION PARA RECUPERAR EL CARRITO---------------------------------------*/
 
 const recuperarCarrito = (sesionParam,car) => {
